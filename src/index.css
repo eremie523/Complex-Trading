@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root{
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', cursive;
+}
+
+.navAnimation{
+  height: 100vh;
+  animation: expand 1s;
+}
+
+.goback{
+  animation: goback 1s;
+}
+
+ul li{
+  position: relative;
+}
+
+nav ul li a::before{
+  content: '';
+  width: 100%;
+  background: rgb(220 38 38);
+  height: 3px;
+  position: absolute;
+  top: -10px;
+  z-index: 7;
+  opacity: 0;
+  right: 0%;
+  transition-duration: 1s;
+}
+
+#nav_btn a::before{
+  width: 0;
+  display: none;
+}
+
+nav ul li:hover a::before{
+  top: 2px;
+  opacity: 1;
+}
+
+nav ul li:hover a{
+  color: rgb(220 38 38);
+}
+
+ul#nav2 li:hover, ul#nav3 li:hover{
+  background-color: rgb(220 38 38 / 65%);
+}
+
+@keyframes expand {
+  from{
+    opacity: 0;
+    height: 0vh;
+  }
+  to{
+    opacity: 1;
+    height: 100vh;
+  }
+}
+
+@keyframes goback {
+  from{
+    display: block;
+    opacity: 1;
+    height: 100vh;
+  }
+  to{
+    opacity: 0;
+    height: 0vh;
+  }
+}
+
+.poppins {
+  font-family: 'Poppins', cursive;
+}
+
+#sliderCard{
+  opacity: 0.7;
+  transition-duration: .5s;
+}
+
+#sliderCard:hover{
+  opacity: 0;
+}
+
+/* Copilot
+Rewards
+Settings
+Copilot
+gist.githubusercontent.com
+Ask a follow-up question
+GPT-3.5
+GPT-4 */
+
